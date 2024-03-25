@@ -1,0 +1,14 @@
+version: '3'
+services:
+  django:
+    container_name: django-in-docker
+    image: python:3.12-slim
+    volumes:
+      - ${HOST_FOLDER}:/workdir
+    entrypoint: ["/bin/bash", "-c"]
+    command: 
+      - |
+        /workdir/docker-scripts/install-django.sh $PROJECT_NAME
+        /workdir/docker-scripts/run-django.sh
+    ports:
+      - "8000:8000"

@@ -1,0 +1,9 @@
+*
+
+!.gitignore
+!README.md
+
+!.env-sample
+!docker-scripts/
+!docker-scripts/*.sh
+!docker-compose.yml
